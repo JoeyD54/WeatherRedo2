@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dummyLabel"
+        android:padding="2dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureLabel"
+        android:text="@string/temperature_label"
+        android:layout_toLeftOf="@id/dummyLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempText"
+        android:text="placeholder"
+        android:layout_toEndOf="@id/dummyLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityLabel"
+        android:text="@string/city_label"
+        android:layout_below="@id/temperatureLabel"
+        android:layout_toStartOf="@id/dummyLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityText"
+        android:text="Placeholder"
+        android:layout_toEndOf="@id/dummyLabel"
+        android:layout_below="@id/tempText"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getLocationButton"
+        android:text="@string/get_location_button"
+        android:layout_below="@id/cityText"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tenDayForecastButton"
+        android:text="@string/ten_day_forecast_button"
+        android:layout_below="@id/getLocationButton"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

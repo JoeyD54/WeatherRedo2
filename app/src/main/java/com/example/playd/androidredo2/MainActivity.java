@@ -3,7 +3,6 @@ package com.example.playd.androidredo2;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -13,7 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Button tenDayForecastButton, getLocationButton;
     private final int MY_LOCATION_PERMISSION = 100;
 
-    //Use fusedLocationProviderClien
+    //Use fusedLocationProviderClient
+    private FusedLocationProviderClient fusedLocationProviderClient;
 
 
     @Override
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         temperatureTextView = (TextView) findViewById(R.id.tempText);
         getLocationButton = (Button) findViewById(R.id.getLocationButton);
         tenDayForecastButton = (Button) findViewById(R.id.tenDayForecastButton);
+
+        fusedLocationProviderClient = LocationServices.getF;
 
         getLocationData();
 
@@ -119,7 +123,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }
 
